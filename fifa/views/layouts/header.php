@@ -1,5 +1,5 @@
 <?php 
-  define('BASEURL','http://localhost/web_v/practica12/fifa');
+  define('BASEURL','http://localhost/proyecto');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,8 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
 
+    <link rel="icon" href="favicon.ico">
+<!-- Javascript-->
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/jquery.fancybox.pack.js"></script>    
     <link href="../css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />    
@@ -37,37 +38,43 @@
   <body>
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
+      <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Examen 3</a>
-          <ul class="nav navbar-nav navbar-right">
-            <?php if(!isset($_SESSION['user'])){ ?>
-            <li><a href="<?php echo BASEURL;?>/views/site/login.php">
-              <span class="glyphicon-log-in"></span>Login</a>
-            </li>
-            <?php } else{?>
-            <li><a href="<?php echo BASEURL;?>/views/site/logout.php">
-              <span class="glyphicon-log-in"></span>Logout</a>
-            </li>
-            <?php } ?>
-          </ul>  
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">FIFA</a>
         </div>
-
-
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <?php if(isset($_SESSION['user'])){ ?>
-            <li><a href="<?php echo BASEURL;?>/views/pais/pais.php" class="fancyy">Pais</a></li>
-            <li><a href="<?php echo BASEURL;?>/views/equipo/equipo.php" class="fancyy">Equipo</a></li>
-            <li><a href="<?php echo BASEURL;?>/views/integrante/integrante.php" class="fancyy">Integrante</a></li>
-            <?php } ?>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Buscar...">
-          </form>
-        </div>
+          <form class="navbar-form navbar-right" role="form">
+            <!--<div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>-->
+            <?php if(!isset($_SESSION['user'])){ ?>
+              <li><a href="<?php echo BASEURL;?>/views/site/login.php">
+                <!--<span class="glyphicon-log-in"></span>Login-->
+                <button type="submit" class="btn btn-success">Login</button>
+                  </a>
 
+              </li>
+            <?php } else{?>
+              <li><a href="<?php echo BASEURL;?>/views/site/logout.php">
+                <!--<span class="glyphicon-log-in"></span>Logout-->
+                <button type="submit" class="btn btn-success">Logout</button>
+              </a>
+            </li>
+            <?php } ?>
+            
+          </form>
+        </div><!--/.navbar-collapse -->
       </div>
     </div>
-    <div class="container">
+
+  <div class="container">
       
