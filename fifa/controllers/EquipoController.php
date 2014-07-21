@@ -1,12 +1,12 @@
 <?php
-	class PaisController extends Pais{
+	class EquipoController extends Equipo{
 		
 		public $muestra_errores = false;
 		function __construct(){
-			parent::Pais();
+			parent::Equipo();
 		}
 		
-		public function insertaPais($datos,$archivos){
+		public function insertaEquipo($datos,$archivos){
 			echo "<pre>datos:";
 			print_r($datos);
 			print_r($archivos);
@@ -15,8 +15,9 @@
     		
 			//$pais = new this();
 			$this->set_nombre($datos['nombre']);
-			$this->set_bandera($archivos['bandera']);
-			$this->set_id_continente($datos['id_continente']);
+			$this->set_id_pais($datos['id_pais']);			
+			$this->set_escudo($archivos['escudo']);
+
 			
 			if (count($this->errores)>0) {
 				//print_r($this->errores);
@@ -24,7 +25,7 @@
 				$this->muestra_errores = true;
 			}
 			else {
-				move_uploaded_file($archivos['bandera']['tmp_name'], "../archivos/".$archivos['bandera']['name']);
+				move_uploaded_file($archivos['escudo']['tmp_name'], "../archivos/".$archivos['escudo']['name']);
 				$this->inserta($this->get_atributos());
 			}
 

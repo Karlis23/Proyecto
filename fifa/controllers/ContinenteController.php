@@ -6,10 +6,9 @@
 			parent::Continente();
 		}
 		
-		public function insertaContinente($datos,$archivos){
+		public function insertaContinente($datos){
 			echo "<pre>datos:";
 			print_r($datos);
-			print_r($archivos);
     		echo "</pre>";
 			//$continente = new Continente();
 			$this->set_nombre($datos['nombre']);
