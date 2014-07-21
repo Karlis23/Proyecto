@@ -1,14 +1,14 @@
 <?php
 
 class Usuario extends Modelo{
-    public $nombre_tabla = 'usuarios';
+    public $nombre_tabla = 'usuario';
     public $pk = 'id_usuario';
     
     
     public $atributos = array(
         'email'=>array(),
         'password'=>array(),
-        'rol'=>array();
+        'rol'=>array(),
     );
     
     public $errores = array( );
@@ -43,7 +43,7 @@ class Usuario extends Modelo{
             $this->errores[] = "Este e-mail (".$valor.") no es valido";
         }
 
-        $rs = $this->consulta_sql("select * from usuarios where email = '$valor'");
+        $rs = $this->consulta_sql("select * from usuario where email = '$valor'");
         $rows = $rs->GetArray();
         
         if(count($rows) > 0){

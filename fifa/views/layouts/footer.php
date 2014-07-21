@@ -31,45 +31,8 @@
         });
     </script>
 
-  <!--Valida el formulario pais-->
-  <script type="text/javascript">
-    $(document).ready(function() {
-        $('#Form_pais').bootstrapValidator({
-            feedbackIcons: {
-                valid: 'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-            },
-            fields: {
-                nombre: {
-                    validators: {
-                        notEmpty: {
-                            message: 'El nombre es requerido.'
-                        }
-                    }
-                },
-                bandera: {
-                    validators: {
-                        file: {
-                            extension: 'jpeg,png,jpg',
-                            type: 'image/jpeg,image/png,image/jpg',
-                            maxSize: 2048 * 1024,   // 2 MB
-                            message: 'E archivo seleccionado no es valido'
-                        }
-                    }
-                },
-                id_continente: {
-                    validators: {
-                        integer: {
-                            message: 'solo enteros'
-                        }
-                    }
-                },
-            }
-        });
-    });
 
-  </script>
+
 
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/bootstrapValidator.min.js"></script>

@@ -130,18 +130,18 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `fifa_oficial`.`jugador` (
   `id_jugador` INT(11) NOT NULL AUTO_INCREMENT,
   `numero` INT(11) NULL DEFAULT NULL,
-  `idi_ntegrante` INT(11) NOT NULL,
+  `id_integrante` INT(11) NOT NULL,
   `id_posicion` INT(11) NOT NULL,
   PRIMARY KEY (`id_jugador`),
   INDEX `fk2Jugador_idx` (`id_posicion` ASC),
-  INDEX `fk3Jugador` (`idi_ntegrante` ASC),
+  INDEX `fk3Jugador` (`id_integrante` ASC),
   CONSTRAINT `fk2Jugador`
     FOREIGN KEY (`id_posicion`)
     REFERENCES `fifa_oficial`.`posicion` (`id_posicion`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT `fk3Jugador`
-    FOREIGN KEY (`idi_ntegrante`)
+    FOREIGN KEY (`id_ntegrante`)
     REFERENCES `fifa_oficial`.`integrante` (`id_integrante`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)

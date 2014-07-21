@@ -15,11 +15,11 @@
       }
       
       
-      include ('../layouts/header.php');
+      include ('../layouts/header2.php');
 ?>
 <div class="row">
 
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-3">
     <div class="<?php echo ($login->muestra_errores)?'alert alert-danger':''; ?> ">
       <?php 
         if ($login->muestra_errores) {
@@ -31,12 +31,13 @@
     </div>
     <form role="form" method="POST" >
       <div class="form-group">
-        <label for="exampleInputEmail1">Email</label>
-        <input type="email" class="form-control" id="email" name="email" >
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email" class="form-control" id="email" name="email" >
       </div>
+
       <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="password" name="password" >
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Contraseña" name="password" >
       </div>
 
       <button type="submit" class="btn btn-default">Aceptar</button>

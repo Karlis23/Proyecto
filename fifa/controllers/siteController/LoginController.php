@@ -7,7 +7,7 @@
 		}
 		
 		public function validaUsuario($datos){
-			$rs = $this->consulta_sql(" select * from usuarios where email = '".$datos['email']."'  ");
+			$rs = $this->consulta_sql(" select * from usuario where email = '".$datos['email']."'  ");
         	$rows = $rs->GetArray();
         	if(count($rows) > 0){
         		if ($rows['0']['password']== md5($datos['password'])) {
