@@ -18,10 +18,6 @@
     $contienteC->insertaContinente($_POST,$_FILES);
   }
 ?>
-    <div class="row">
-      <div class="col-md-10">
-        <h4>Continente</h4>
-
 
           <?php
             if ($continenteC->muestra_errores) {
@@ -37,23 +33,24 @@
            <?php   
             } 
           ?>
-
+        <h4>Continente</h4>
 
         <form id="formregistro" enctype="multipart/form-data" method="POST" class="form-horizontal">
-          
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">          
           <div class="form-group">
-            <label class="col-lg-3 control-label" for="nombre">Nombre Continente</label>
-            <div class="col-lg-3">
-                <input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $continenteC->get_nombre(); ?>"/>
-            </div>
+            <label  for="nombre">Nombre Continente</label>
+            <input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $continenteC->get_nombre(); ?>" placeholder="Enter nombre"/>           
           </div>
-            <input type="submit" name="Guardar" value="Guardar" />
-          </div>
-          
+            <button type="button" class="btn btn-primary">Guardar</button>
+      </div> 
+       <div class="col-md-3"></div>
+        </div>
+ 
         </form>  
 
-      </div>
-    </div>
+
   
 </div>
 

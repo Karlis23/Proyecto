@@ -18,10 +18,6 @@
     $paisC->insertaPais($_POST,$_FILES);
   }
 ?>
-    <div class="row">
-      <div class="col-md-10">
-        <h4>Pais</h4>
-
 
           <?php
             if ($paisC->muestra_errores) {
@@ -38,36 +34,32 @@
             } 
           ?>
 
+        <h4>Pais</h4>
 
         <form id="formregistro" enctype="multipart/form-data" method="POST" class="form-horizontal">
-          
+          <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">      
           <div class="form-group">
-            <label class="col-lg-3 control-label" for="nombre">Nombre Pa&iacute;s</label>
-            <div class="col-lg-3">
-                <input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $paisC->get_nombre(); ?>"/>
-            </div>
+            <label  for="nombre">Nombre Pa&iacute;s</label>
+                <input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $paisC->get_nombre(); ?>" placeholder="Enter nombre"/>
           </div>
 
           <div class="form-group">
-            <label class="col-lg-3 control-label" for="bandera">Bandera</label>
-            <div class="col-lg-3">
-                <input type="file" class="form-control" name="bandera" id="bandera"/>
-            </div>
+            <label  for="bandera">Bandera</label>
+            <input type="file" class="form-control" name="bandera" id="bandera"/>
+
           </div>
 
           <div class="form-group">
-            <label class="col-lg-3 control-label" for="id_continente">Id continente</label>
-            <div class="col-lg-3">
-                <input type="text" class="form-control" name="id_continente" id="id_continente" value="<?php echo $paisC->get_id_continente(); ?>"/>
-            </div>
+            <label  for="id_continente">Id continente</label>
+            <input type="text" class="form-control" name="id_continente" id="id_continente" value="<?php echo $paisC->get_id_continente(); ?>" placeholder="Seleccionar Id"/>
           </div>
-            <input type="submit" name="Guardar" value="Guardar" />
-          </div>
-          
-        </form>  
-
+            <button type="button" class="btn btn-primary">Guardar</button>
+      </div> 
+      <div class="col-md-3"></div>
       </div>
-    </div>
+        </form>  
   
 </div>
 

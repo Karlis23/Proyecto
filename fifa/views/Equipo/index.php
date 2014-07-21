@@ -16,26 +16,31 @@
 
 		<h2 class="text-center">Registro del Equipo:</h2><hr>
 		<form role="form">
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">			
 
 			<!--<title>Registro Ciudad</title>-->
 
 			  <div class="form-group">
-			    <label for="nombre">Nombre:</label>
+			    <label for="nombre">Nombre</label>
 			    <input type="text" class="form-control" id="nombre" placeholder="Enter nombre">
 			  </div>
 
 			   <div class="form-group">
-			    <label for="id_pais">Identificador Pa&iacute;s:</label>
+			    <label for="id_pais">Id Pa&iacute;s</label>
 			    <input type="text" class="form-control" id="id_pais" placeholder="Enter identificador">
 			  </div>
 
 			   <div class="form-group">
-			    <label for="escudo">Escudo:</label>
+			    <label for="escudo">Escudo</label>
 			    <input type="file" class="form-control" id="escudo" placeholder="Enter escudo">
 			  </div>
 
   			<button type="button" class="btn btn-primary">Guardar</button>
-
+	    </div> 
+        </div>
+        <div class="col-md-3"></div>
 		</form>
 
 		</div>

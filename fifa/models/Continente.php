@@ -1,21 +1,21 @@
+
 <?php
 
-
-class continente extends Modelo{
+class Continente extends Modelo{
     public $nombre_tabla = 'continente';
     public $pk = 'id_continente';
     
     
     public $atributos = array(
-        'nombre'=>array()
+        'nombre'=>array(),
+
     );
     
     public $errores = array( );
     
+    private $nombre;       
     
-        private $nombre;   
-
-    function integrantes(){
+    function Continente(){
         parent::Modelo();
     }
     
@@ -27,28 +27,24 @@ class continente extends Modelo{
         return $rs;
     }
     
-  
-
+    
     public function get_nombre(){
         return $this->nombre;
-    }
-    
+    } 
+
     public function set_nombre($valor){
-        $er= new Er();
-        if ($er->valida_nombre($valor)){
-            $this->nombre = trim( $valor );
-        }else{
-            $this->errores[]= "El nombre de integrante : $valor no es valido"
+
+        $er = new Er();
+        
+        if ( !$er->valida_nombre($valor) ){
+            $this->errores[] = "Este nombre (".$valor.") no es valido";
         }
+            $this->nombre = trim($valor);
+        
     }
 
-   
-    
-
-
-    
-    
     
 }
+
 
 ?>
