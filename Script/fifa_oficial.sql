@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `fifa_oficial`.`integrante` (
 ENGINE = InnoDB
 AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8
-COMMENT = ' ';
+COMMENT = '	';
 
 
 -- -----------------------------------------------------
@@ -181,7 +181,7 @@ CREATE TABLE IF NOT EXISTS `fifa_oficial`.`juego` (
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
-COMMENT = ' ';
+COMMENT = '	';
 
 
 -- -----------------------------------------------------
